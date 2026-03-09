@@ -21,6 +21,8 @@ Ramesh works around 9–10 hours per day and earns ₹700–₹1000 daily depend
 
 The system will help protect workers like Ramesh from income loss.
 
+📄 [Download Persona PDF](./docs/persona.pdf)
+
 ---
 
 ## Proposed Solution
