@@ -1,3 +1,83 @@
-"# GUIDEWIRE" 
-🛡️ AI-Powered Parametric Insurance for Gig Delivery WorkersEmpowering India's Gig Economy against Climate & Environmental Disruptions📌 Problem StatementIndia's delivery partners (Swiggy, Zomato, Zepto, etc.) are the backbone of the digital economy but face 20-30% income loss due to external disruptions like heavy rain, extreme heat, or severe pollution. Existing insurance covers health or accidents, but none cover lost wages due to inability to work.Our Solution: A "zero-touch" parametric insurance platform that triggers instant payouts based on real-time environmental data, ensuring financial stability for workers.👤 Target Persona: The Urban HeroName: Ramesh Kumar (28, Hyderabad)Role: Food Delivery PartnerDaily Earnings: ₹700 – ₹1000The Pain Point: During heavy rain or "Severe" AQI levels, Ramesh loses ~5 hours of active work, leading to a loss of ₹300–₹500. This loss is currently unrecoverable.⚙️ How It Works: The Parametric ModelUnlike traditional insurance, this system requires no claim filing. It relies on hard data triggers.Trigger TypeMetric / ParameterPayout LogicHeavy Rainfall$> 15mm$ in 3 hours50% Daily CoverageExtreme HeatTemp $> 44°C$ for 3+ hours40% Daily CoverageSevere PollutionAQI $> 400$30% Daily Coverage🧠 AI & Technical Architecture1. Dynamic Risk Pricing (AI/ML)We use a Random Forest Regressor (Scikit-Learn) to calculate the "Weekly Risk Score."Inputs: Historical weather patterns of the worker's city + Upcoming week's forecast + Worker's historical earnings.Output: A personalized weekly premium (₹10, ₹20, or ₹30).2. Intelligent Fraud DetectionTo prevent "location spoofing" (claiming for rain in a location where the worker isn't present):GPS Validation: The system cross-references the worker's real-time GPS coordinates with the specific weather station reporting the disruption.Activity Check: AI verifies if the worker was actually "Online" on their delivery app during the disruption hours to prevent idle claims.📊 Weekly Pricing ModelAligned with the gig worker's weekly payout cycle.PlanWeekly PremiumCoverage LimitBest ForBasic₹10₹500 / weekLow-risk zonesStandard₹20₹700 / weekMonsoon-heavy zonesPremium₹30₹1,000 / weekHigh-pollution/Extreme heat zones🛠️ Technology StackFrontend: React.js (Responsive Web for mobile-first access)Backend: Spring Boot (Java) - Robust & ScalableDatabase: MySQL (User profiles, Policy & Claim logs)AI/ML Engine: Python (Flask API + Scikit-Learn)External APIs: * OpenWeather API (Real-time Rainfall/Temp)AQICN API (Pollution/Air Quality)Razorpay (Mock/Test Mode for instant payouts)🚀 System WorkflowOnboarding: Worker registers and selects a weekly plan.Risk Analysis: AI calculates the premium based on the worker's zone.Monitoring: System runs a cron job every hour to fetch API data for active disruption zones.Auto-Trigger: If threshold (e.g., 20mm rain) is hit, the system identifies all covered workers in that Geo-fence.Instant Payout: Payment is pushed to the worker's linked UPI/Wallet via Razorpay Mock API.📅 Roadmap (DevTrails Phases)Phase 1 (Seed): Ideation, Persona, and Architecture (Current).Phase 2 (Scale): Developing the AI Pricing Engine & Spring Boot CRUDs.Phase 3 (Soar): Integrating Weather APIs & Simulating "Real-time" Payouts.
-• Real-time disruption alerts
+# 🛡️ AI-Powered Parametric Insurance for Gig Delivery Workers
+### *Empowering India's Gig Economy against Climate & Environmental Disruptions*
+
+## 📌 Project Overview
+India's delivery partners (Swiggy, Zomato, Zepto, Amazon) are the backbone of the digital economy but face **20-30% income loss** due to external disruptions like heavy rain, extreme heat, or severe pollution. 
+
+**Our Solution:** A "zero-touch" parametric insurance platform that triggers instant payouts based on real-time environmental data, ensuring financial stability for workers like Ramesh.
+
+---
+
+## 👤 Target Persona: The Urban Hero
+* **Name:** Ramesh Kumar (28, Hyderabad)
+* **Role:** Food Delivery Partner (Swiggy/Zomato)
+* **Daily Earnings:** ₹700 – ₹1000
+* **The Pain Point:** During heavy rain or "Severe" AQI levels, Ramesh loses ~5 hours of active work, leading to a direct loss of ₹300–₹500.
+* **Persona Document:** [📄 View Detailed Persona PDF](./docs/Devtrails_TeamTech_Persona.pdf)
+
+---
+
+## ⚙️ How It Works: The Parametric Model
+Unlike traditional insurance, this system requires **no claim filing**. It relies on **hard data triggers** from IoT and Weather APIs.
+
+| Trigger Type | Metric / Parameter | Payout Logic |
+| :--- | :--- | :--- |
+| **Heavy Rainfall** | > 15mm in a 3-hour window | 50% Daily Coverage |
+| **Extreme Heat** | Temp > 44°C for 3+ hours | 40% Daily Coverage |
+| **Severe Pollution** | AQI > 400 (Severe category) | 30% Daily Coverage |
+
+
+
+---
+
+## 🧠 AI & Technical Architecture
+
+### 1. Dynamic Risk Pricing (AI/ML)
+We use a **Random Forest Regressor** to calculate the "Weekly Risk Score."
+* **Inputs:** Historical weather patterns + Upcoming week's forecast + Worker's historical earnings.
+* **Output:** A personalized weekly premium (₹10, ₹20, or ₹30).
+
+### 2. Intelligent Fraud Detection
+To satisfy the **Scale Phase** requirements:
+* **GPS Validation:** Cross-references the worker's real-time coordinates with specific weather station data.
+* **Activity Check:** AI verifies if the worker was "Online" on their delivery app during the disruption to prevent idle/fake claims.
+
+
+
+---
+
+## 📊 Weekly Pricing Model
+*Aligned with the gig worker's weekly payout cycle.*
+
+| Plan Type | Weekly Premium | Coverage Limit | Best For |
+| :--- | :--- | :--- | :--- |
+| **Basic** | ₹10 | ₹500 / week | Low-risk/Stable zones |
+| **Standard** | ₹20 | ₹700 / week | Monsoon-heavy regions |
+| **Premium** | ₹30 | ₹1,000 / week | High-pollution/Extreme heat zones |
+
+---
+
+## 🛠️ Technology Stack
+* **Frontend:** React.js (Mobile-responsive UI)
+* **Backend:** Spring Boot (Java)
+* **Database:** MySQL (User Profiles & Policy Logs)
+* **AI/ML Engine:** Python (Scikit-Learn)
+* **APIs:** * *OpenWeather API* (Rainfall/Temp data)
+    * *AQICN API* (Pollution/Air Quality)
+    * *Razorpay Sandbox* (Simulated Instant Payouts)
+
+---
+
+## 🚀 System Workflow
+1. **Onboarding:** Worker registers and selects a weekly plan.
+2. **Risk Analysis:** AI calculates the premium based on the worker's city/zone.
+3. **Monitoring:** System runs an hourly cron job to fetch API data for active disruption zones.
+4. **Auto-Trigger:** If the threshold (e.g., 20mm rain) is hit, the system identifies all covered workers in that Geo-fence.
+5. **Instant Payout:** Payment is pushed to the worker's linked UPI/Wallet via Mock API.
+
+---
+
+## 📅 Roadmap (DEVTrails Phases)
+- [x] **Phase 1 (Seed):** Ideation, Persona, and Architecture.
+- [ ] **Phase 2 (Scale):** Developing AI Pricing Engine & Spring Boot CRUDs.
+- [ ] **Phase 3 (Soar):** Integrating Weather APIs & Fraud Detection Logic.
