@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@theme {
+  --color-apple-glass-bg: rgba(255, 255, 255, 0.4);
+  --color-apple-glass-border: rgba(255, 255, 255, 0.6);
+}
+
+@layer utilities {
+  .glass-input {
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    color: #0f172a;
+    backdrop-filter: blur(12px);
+  }
+  .dark .glass-input {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: white;
+  }
+  .glass-input:focus {
+    outline: none;
+    border-color: rgba(99, 102, 241, 0.5);
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 0 15px rgba(99, 102, 241, 0.15);
+  }
+  .dark .glass-input:focus {
+    border-color: rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+  }
+
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f8fafc;
+  background-image: 
+    radial-gradient(at 0% 0%, #e0e7ff 0px, transparent 50%),
+    radial-gradient(at 100% 0%, #fce7f3 0px, transparent 50%),
+    radial-gradient(at 100% 100%, #dcfce7 0px, transparent 50%);
+  color: #0f172a;
+  min-height: 100vh;
+  transition: background-color 0.5s ease;
+}
+
+.dark body {
+  background-color: #020617;
+  background-image: 
+    radial-gradient(at 0% 0%, #0f172a 0px, transparent 50%),
+    radial-gradient(at 100% 0%, #1e1b4b 0px, transparent 50%),
+    radial-gradient(at 50% 100%, #172554 0px, transparent 50%);
+  color: #f8fafc;
+}
