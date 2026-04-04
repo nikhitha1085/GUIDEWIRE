@@ -171,59 +171,52 @@ To prevent fraudulent claims:
 
 ---
 
-# 📂 Project Structure
+# Project Structure
+GUIDEWIRE/
+ ├── frontend/   # React-based user interface
+ ├── backend/    # Node.js and Express server
+ └── README.md
+# Technology Stack
+Frontend
+React.js
+Vite
+CSS
+Backend
+Node.js
+Express.js
+Database
+MySQL
+# Features
+View insurance policies
+Renew policies manually
+Enable or cancel auto-renewal
+Track policy status (Active, Expired, Cancelled)
+# Setup Instructions
+1. Clone the Repository
+git clone https://github.com/nikhitha1085/GUIDEWIRE.git
+cd GUIDEWIRE
+2. Backend Setup
+cd backend
+npm install
+npm start
 
-```
+The backend server runs on:
+http://localhost:5000
 
+3. Frontend Setup
+cd frontend
+npm install
+npm run dev
 
----
+The frontend runs on:
+http://localhost:5173
 
-# 🛠 Technology Stack
-
-
-
----
-
-# 🚀 Getting Started
-
-
-
-# 🔄 System Workflow
-
-1. Worker registers and selects a weekly insurance plan
-2. AI calculates personalized premium based on risk score
-3. System continuously monitors weather & pollution data
-4. When disruption threshold is triggered
-5. Automatic payout is credited to worker wallet
-
----
-
-# 📅 DEVTrails Development Roadmap
-
-*  Phase 1 — Ideation & Architecture
-*  Phase 2 — AI Pricing Engine
-*  Phase 3 — Weather API Integration
-*  Phase 4 — Fraud Detection System
-*  Phase 5 — Mobile UI & Smart Contract payouts
-
----
-
-# 🌍 Future Enhancements
-
-* Real-time IoT weather feeds
-* Blockchain smart-contract payouts
-* Mobile app for gig workers
-* Advanced ML risk models
-* Integration with delivery platforms
-
----
-
-# 👥 Team Collaboration
-
-Git branch workflow:
-
-```
-
-
-Each team member works on a **feature branch** and merges into **dev** via Pull Request.
-
+4. Database Setup
+Create a MySQL database:
+CREATE DATABASE insurance_db;
+Configure database connection in the backend.
+API Endpoints
+Method	Endpoint	Description
+GET	/api/policies	Retrieve all policies
+PUT	/api/policies//renew	Renew a policy
+PUT	/api/policies//cancel-renew	Disable auto-renew
