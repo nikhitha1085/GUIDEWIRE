@@ -1,4 +1,4 @@
-# 🛡️ AI-Powered Parametric Insurance for India's Gig Economy
+#  AI-Powered Parametric Insurance for India's Gig Economy
 
 ### Empowering Gig Delivery Workers Against Climate & Environmental Disruptions
 
@@ -6,7 +6,7 @@ This repository contains a prototype demonstrating an **AI-enabled parametric in
 
 ---
 
-# 📌 Problem Overview
+#  Problem Overview
 
 India's gig delivery workforce (Swiggy, Zomato, Zepto, Amazon etc.) forms the backbone of the digital economy but faces major financial risks.
 
@@ -17,7 +17,7 @@ India's gig delivery workforce (Swiggy, Zomato, Zepto, Amazon etc.) forms the ba
 
 ---
 
-# 💡 Solution Highlights
+#  Solution Highlights
 
 Our platform introduces **Parametric Insurance** where payouts are automatically triggered based on **real-time environmental data**.
 
@@ -61,7 +61,7 @@ Once the trigger is detected, **payout is automatically executed**.
 
 ---
 
-# 🚨 Adversarial Defense & Anti-Spoofing Strategy
+#  Adversarial Defense & Anti-Spoofing Strategy
 
 ## 🔴 Threat Scenario: Market Crash
 
@@ -69,7 +69,7 @@ A coordinated fraud ring can simulate hundreds of fake delivery partners using G
 
 ---
 
-## 🧠 Multi-Layer Defense Architecture
+##  Multi-Layer Defense Architecture
 
 Our system follows a defense-in-depth approach by combining AI, behavioral analytics, and real-time validation to proactively detect and prevent fraud.
 
@@ -123,18 +123,18 @@ A real-time monitoring system provides continuous visibility into platform activ
 
 ---
 
-## 🛡️ Outcome
+##  Outcome
 
 This approach transforms the system from reactive fraud detection to proactive fraud prevention. It safeguards platform liquidity, prevents coordinated attacks, and ensures fair and reliable payouts for genuine gig workers.
 
 ---
 
-## 🔥 Key Innovation
+##  Key Innovation
 
 The core innovation lies in combining AI-driven anomaly detection, graph-based fraud intelligence, and multi-source verification to build a robust defense against adversarial attacks in parametric insurance systems.
 ---
 
-# 🧠 AI & Technical Architecture
+#  AI & Technical Architecture
 
 ## 1️⃣ Dynamic Risk Pricing (Machine Learning)
 
@@ -174,76 +174,19 @@ To prevent fraudulent claims:
 # 📂 Project Structure
 
 ```
-ai_insurance/
-├── app.py                      # Main FastAPI application
-├── requirements.txt            # Dependencies
-├── README.md
-├── modules/
-│   ├── pricing.py              # Weekly pricing logic
-│   ├── payout.py               # Parametric payout calculations
-│   ├── fraud_detection.py      # Fraud detection heuristics
-│   ├── weather_service.py      # Weather / pollution data API
-│   └── models.py               # ML models (fraud, risk scoring)
-└── tests/
-    ├── test_pricing.py
-    ├── test_payout.py
-    └── test_fraud_detection.py
-```
+
 
 ---
 
 # 🛠 Technology Stack
 
-**Backend:** FastAPI / Spring Boot
-**Frontend:** React.js
-**Database:** MySQL
-**AI/ML:** Python (Scikit-Learn)
-**APIs:**
 
-* OpenWeather API (Weather data)
-* AQICN API (Air quality)
-* Razorpay Sandbox (Simulated payouts)
 
 ---
 
 # 🚀 Getting Started
 
-## 1️⃣ Create Virtual Environment
 
-```
-python -m venv venv
-```
-
-Activate it:
-
-```
-venv\Scripts\activate
-```
-
----
-
-## 2️⃣ Install Dependencies
-
-```
-pip install -r requirements.txt
-```
-
----
-
-## 3️⃣ Run the Application
-
-```
-cd ai_insurance
-uvicorn app:app --reload
-```
-
-Open API documentation:
-
-```
-http://localhost:8000/docs
-```
-
----
 
 # 🔄 System Workflow
 
@@ -257,11 +200,11 @@ http://localhost:8000/docs
 
 # 📅 DEVTrails Development Roadmap
 
-* ✅ Phase 1 — Ideation & Architecture
-* 🔄 Phase 2 — AI Pricing Engine
-* 🔄 Phase 3 — Weather API Integration
-* 🔄 Phase 4 — Fraud Detection System
-* 🔄 Phase 5 — Mobile UI & Smart Contract payouts
+*  Phase 1 — Ideation & Architecture
+*  Phase 2 — AI Pricing Engine
+*  Phase 3 — Weather API Integration
+*  Phase 4 — Fraud Detection System
+*  Phase 5 — Mobile UI & Smart Contract payouts
 
 ---
 
@@ -280,13 +223,7 @@ http://localhost:8000/docs
 Git branch workflow:
 
 ```
-main
- └── dev
-      ├── feature-pricing
-      ├── feature-fraud-detection
-      ├── feature-weather-api
-      └── feature-payout-system
-```
+
 
 Each team member works on a **feature branch** and merges into **dev** via Pull Request.
 
